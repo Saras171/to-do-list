@@ -1,0 +1,11 @@
+-- CREATE DAILY TABLE
+CREATE TABLE daily(
+id SERIAL PRIMARY KEY,
+title TEXT,
+date_modified DATE );
+
+--CREATE WORK_LIST TABLE
+CREATE TABLE work_list(
+id SERIAL PRIMARY KEY,
+title TEXT,
+date_modified DATE );

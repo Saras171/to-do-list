@@ -1,0 +1,66 @@
+<%- include("partials/header.ejs") %>
+    <div class="box">
+        <div class="title" >
+            <h1 id="heading"><%= listName %> To-Do List</h1>
+ <h3><%= currentDay%>, <%= locals.date %></h3>
+ <div class="selection"><a class="daily" href="/">Home</a></div>
+  </div>
+
+
+    <div class="list-container">
+  
+   <%   newAddedItems.forEach((newAddedItem)=>{ %>
+      <div class="todoList">
+        <!--CLICK CHECKBOX TO CROSS-OFF THE WORK, ONCE COMPLETED-->
+   <input type="checkbox" />
+   <p id= "title<%= newAddedItem.id %>">  <%= newAddedItem.title%>
+   <br />
+  
+   </p>
+
+   <form class="edit" action="/edit" method="post">
+    <input type="hidden" name="updatedItemId" value="<%=newAddedItem.id%>">
+    <input id="input<%=newAddedItem.id%>" type="text" name="updatedItemTitle" value="<%= newAddedItem.title %>" autocomplete="off"
+      autofocus="true" hidden="true" />
+    <button id="done<%=newAddedItem.id%>" name="checkClicked" value= <%= listName%> class="edit" type="submit" hidden>
+      <img class="icon" src="/assets/icons/check-solid.svg" alt="tick image"></button>
+  </form>
+
+  <button id="edit<%=newAddedItem.id%>" class="edit" onclick="handler('<%=newAddedItem.id%>')">
+    <img class="icon" src="/assets/icons/pencil-solid.svg" alt="pencil image"></button>
+
+      <form class="delete-icon" action="/delete" method="post">
+        <input hidden="true" name="deleteItemId" value=<%= newAddedItem.id%> />
+          <button  type="submit" name="listName" value= <%= listName %>>
+            <img src="/assets/icons/delete.svg" alt="delete-icon" />
+          </button>
+        
+
+       
+      </form>
+    </div>
+    <sup>Added On: <%= newAddedItem.date_modified.toDateString() %> </sup>
+
+     <% }); %> 
+
+    </div>
+
+<form action="/add" method="post">
+    <input  type="text" name="list" placeholder="Enter your <%= listName %> to do list..." autocomplete="off">
+    <button class="add-icon" type="submit" name="clicked" value= <%= listName%>>+</button>
+</form>
+</div>
+</div>
+<!--INCLUDING INLINE JAVASCRIPT-->
+<script>
+  //FUNCTION HANDLER() USES DOM FOR HANDLING BUTTONS FUNCTIONING
+    function handler(id) {
+      document.getElementById("title" + id).setAttribute("hidden", true);
+      document.getElementById("edit" + id).setAttribute("hidden", true);
+      document.getElementById("done" + id).removeAttribute("hidden");
+      document.getElementById("input" + id).removeAttribute("hidden");
+    }
+  
+  </script>
+</main>
+<%- include ("partials/footer.ejs") %>

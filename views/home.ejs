@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+
+<div class="box">
+    <div class="title" >
+        
+        <h1 id="heading"><%= listName %> to To-Do List</h1>
+<h3><%= currentDay%>, <%= locals.date %></h3>
+<div class="selection"><a class="daily" href="/daily">Daily List</a>
+<a href="/work">Work List</a></div>
+</div>
+<%- include ("partials/footer.ejs") %>

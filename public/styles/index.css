@@ -1,0 +1,131 @@
+/*Style-sheet*/
+/*REFACTORING COMMON MULTIPLY RULES*/
+
+/*Multiple Selectors*/
+body, input[type="text"], form, .title, .list-container{
+    text-align: center;
+}
+button, .add-icon{
+    margin: 1rem;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #B799FF;
+    border-width: 10px;
+}
+
+   form, .title{
+    background-color: #8af58a;
+}
+.list-container, form, .title{
+    padding: 1rem;
+}
+.icon, input[type="checkbox"] {
+    height: 20px;
+  }
+  /*Hierarchical Selector*/
+  .title h3{
+    color: black;
+    text-align: right;
+}
+/*Combining Combiners*/
+button, .add-icon, form.edit, form.delete-icon{
+    padding: 0;
+}
+form.edit, form.delete-icon{
+    background-color: transparent;
+}
+
+.selection a, .title{
+    color: white;
+}
+button, .add-icon, input[type="checkbox"] :hover{
+    transition: 0.3s;
+    cursor: pointer;
+    }
+/*HTML Element tags styling*/
+html{
+background-image: linear-gradient(20deg,rgba(23, 68, 12, 0.726) 50%, #FFFEB8 50%);
+min-height: 100vh;
+}
+body{
+    margin: 0;
+}
+a:hover{
+    color:#082292;
+}
+input[type="checkbox"]{
+    width: 20px;
+ }
+input:checked+p{
+     text-decoration: line-through;
+     text-decoration-color:  black;
+ }
+ input[type="text"]{
+     height: 4rem;
+     border: none;
+     background-color:aliceblue;
+     border-radius: 1rem;
+     font-size:large;
+ }
+ button{
+    min-height: 40px;
+    width: 40px;
+}
+form{
+    border-bottom-left-radius:1rem ;
+    border-bottom-right-radius:1rem ;
+}
+
+sup{
+    opacity: 0.5;
+    font-size: small;
+ text-align: left;
+ }
+ footer{
+    font-size: 1.25rem;
+ }
+ 
+ /*Classes Styling */
+.box{
+    width: 75%;
+    height: 60%;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 10px 10px 10px 10px #525153;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 100;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.selection{
+    display: grid;
+grid-template: 1fr / 1fr 1fr;
+}
+.list-container{
+    background-color: beige;
+    font-size: 22px;
+
+}
+.todoList{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.add-icon{
+    min-height: 80px;
+    width: 80px;
+    font-size: 3rem;
+}
+::placeholder {
+    opacity: 1;
+}
+
+
+
+
+  
+
