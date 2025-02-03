@@ -1,4 +1,4 @@
-### Welcome to ***[To-Do List Web Application](https://github.com/saras171/todo-list.git)***
+### Welcome to ***[To-Do List Web Application](https://github.com/Saras171/to-do-list.git)***
 
 ## Table of contents
 
@@ -42,7 +42,7 @@ The To-Do List web application is a simple and efficient tool that allows users 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/saras171/todo-list.git
+git clone https://github.com/saras171/to-do-list.git
 ``` 
 
 2. Navigate to the project directory:

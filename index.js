@@ -173,6 +173,6 @@ app.post("/delete", async (req, res) => { //DELETE THE LIST-ITEM FROM THEIR RESP
 });
 
 //FOR LISTENING PORT
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server running on http://localhost:${port}.`);
 });
