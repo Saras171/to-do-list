@@ -5,7 +5,7 @@ import pg from "pg";
 import env from "dotenv";
 
 const app = express();
-const port = 4001;
+const PORT = process.env.PORT || 4001;
 env.config();
 
 //POSTGRES SQL CONFIGURATION
@@ -173,6 +173,6 @@ app.post("/delete", async (req, res) => { //DELETE THE LIST-ITEM FROM THEIR RESP
 });
 
 //FOR LISTENING PORT
-app.listen(process.env.PORT || port, () => {
-  console.log(`Server running on http://localhost:${port}.`);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}.`);
 });
