@@ -30,6 +30,8 @@ The To-Do List web application is a simple and efficient tool that allows users 
 
 - Store tasks locally using localStorage
 
+- ![To Do List Demo](./public/assets/Images/To-Do-list-Demo.gif)
+
 ## Technologies Used
 
 - Frontend: HTML, CSS, Javascript, DOM
